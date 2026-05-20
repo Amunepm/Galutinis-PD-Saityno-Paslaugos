@@ -1,4 +1,4 @@
 package lt.viko.eif.pmaciulevicius.ggavenas.galutinisprojektas.client;
 
-public class aaa {
+public class MeteostatClient {
 }
