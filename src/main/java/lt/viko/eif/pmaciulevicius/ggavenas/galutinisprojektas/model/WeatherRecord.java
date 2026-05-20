@@ -1,10 +1,18 @@
 package lt.viko.eif.pmaciulevicius.ggavenas.galutinisprojektas.model;
 
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "weather_records")
 public class WeatherRecord {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "location_id", nullable = false)
     private WeatherLocation location;
     private LocalDate date;
     private Double averageTemperature;
